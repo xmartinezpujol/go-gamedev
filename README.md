@@ -9,9 +9,8 @@ git clone https://github.com/xmartinezpujol/go-gamedev.git
 
 Install dependencies
 ``` shell
-cd ./src
-go get github.com/gorilla/websocket
-go run main.go
+dep ensure
+go run cmd/server/main.go
 ```
 
 Then point your browser to http://localhost:8000
