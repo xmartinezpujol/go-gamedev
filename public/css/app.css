@@ -1,0 +1,13 @@
+#messages {
+    background-color: lightcyan;
+    min-height: 100px;
+    width: 100%;
+}
+
+.room-message {
+    display: flex;
+}
+
+.msg-user {
+    margin-right: 10px;
+}
