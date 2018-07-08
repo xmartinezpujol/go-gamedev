@@ -7,6 +7,8 @@ Clone rep
 git clone https://github.com/xmartinezpujol/go-gamedev.git
 ```
 
+Install [dep](https://golang.github.io/dep/docs/installation.html)
+
 Install dependencies
 ``` shell
 dep ensure
