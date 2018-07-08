@@ -1,6 +1,6 @@
 # Go Game Development
 
-### Server localhost8000
+### Server localhost:8000
 
 Clone rep
 ``` shell
@@ -15,7 +15,7 @@ dep ensure
 go run cmd/server/main.go
 ```
 
-### Client localhost8000
+### Client localhost:3001
 
 Install dependencies
 ``` shell
@@ -24,9 +24,8 @@ npm install
 
 Client dev
 ``` shell
-npm start // run dev environtment
+npm start // run dev environment
 npm run build // generate bundle
 ```
 
-Then point your browser to http://localhost:3001
 
