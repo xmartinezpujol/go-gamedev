@@ -21,6 +21,7 @@ var upgrader = websocket.Upgrader{
 type Message struct {
 	User string `json:"user"`
 	Message  string `json:"message"`
+	Id string `json:"id"`
 }
 
 func main() {
