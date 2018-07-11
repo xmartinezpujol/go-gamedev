@@ -1,13 +1,7 @@
 import React from 'react';
-import glamorous from 'glamorous';
+import { Stage } from 'react-pixi-fiber';
 
-const Background = glamorous.div({
-  display: 'flex',
-  backgroundColor: 'black',
-  height: '100%',
-  width: '100%',
-});
-
+import PlayerCharacter from '../Player/PlayerCharacter';
 
 class Canvas extends React.Component {
   constructor(props) {
@@ -16,7 +10,13 @@ class Canvas extends React.Component {
 
   render() {
     return (
-      <Background />
+      <Stage
+        width={window.innerWidth}
+        height={window.innerHeight}
+        options={{ backgroundColor: 0x11DBE5 }}
+      >
+        <PlayerCharacter height={80} width={80} />
+      </Stage>
     );
   }
 }

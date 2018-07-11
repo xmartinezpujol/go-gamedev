@@ -29,10 +29,12 @@ class ChatWindow extends React.Component {
       ws: null,
       messages: {},
       inputMsg: '',
+      user: uniqid('user-'),
     };
     this.handleSendMsg = this.handleSendMsg.bind(this);
     this.handleMsgUpdate = this.handleMsgUpdate.bind(this);
     this.addMessage = this.addMessage.bind(this);
+    this.keyPress = this.keyPress.bind(this);
   }
 
   componentWillMount() {
@@ -55,12 +57,12 @@ class ChatWindow extends React.Component {
   }
 
   handleSendMsg() {
-    const { ws, inputMsg } = this.state;
+    const { ws, inputMsg, user } = this.state;
 
     if (inputMsg !== '') {
       ws.send(
         JSON.stringify({
-          user: 'xmjol',
+          user,
           message: inputMsg,
           id: uniqid('msg-'),
         }),
@@ -85,6 +87,12 @@ class ChatWindow extends React.Component {
     this.setState(() => ({
       messages: [...messages, msg],
     }));
+  }
+
+  keyPress(e){
+    if (e.keyCode === 13) {
+      this.handleSendMsg();
+    }
   }
 
   render() {
